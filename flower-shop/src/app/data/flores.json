@@ -1,0 +1,184 @@
+[
+    {
+        "id": 1,
+        "tipo": "Ornamental Pepper (Solanum)",
+        "descripción": "Pequeña planta con flores amarillas puntiagudas y hojas verdes compactas",
+        "maceta": "Recipiente cilíndrico azul pastel con diseño tipo acuarela",
+        "opciones_maceta": [
+            "Azul pastel",
+            "Terracota",
+            "Blanco",
+            "Negro"
+        ],
+        "nivel_cuidado": "Moderado",
+        "precio_estimado": "€12,99"
+    },
+    {
+        "id": 2,
+        "tipo": "Planta decorativa con miniflores",
+        "descripción": "Arbusto compacto con abundante follaje verde y pequeñas flores rosadas",
+        "maceta": "Maceta blanca ovalada",
+        "opciones_maceta": [
+            "Blanco",
+            "Negro",
+            "Gris",
+            "Beige"
+        ],
+        "nivel_cuidado": "Bajo",
+        "precio_estimado": "€14,50"
+    },
+    {
+        "id": 3,
+        "tipo": "Geranio rojo (Pelargonium)",
+        "descripción": "Planta con flores rojas vibrantes y hojas verdes redondeadas",
+        "maceta": "Maceta clásica de terracota",
+        "opciones_maceta": [
+            "Terracota",
+            "Blanco",
+            "Verde",
+            "Gris"
+        ],
+        "nivel_cuidado": "Moderado",
+        "precio_estimado": "€9,95"
+    },
+    {
+        "id": 4,
+        "tipo": "Margarita rosa (Bellis)",
+        "descripción": "Planta con flores tipo margarita de color rosa y follaje verde",
+        "maceta": "Maceta blanca simple",
+        "opciones_maceta": [
+            "Blanco",
+            "Azul claro",
+            "Rosa",
+            "Beige"
+        ],
+        "nivel_cuidado": "Moderado",
+        "precio_estimado": "€8,75"
+    },
+    {
+        "id": 5,
+        "tipo": "Pensamientos multicolor (Viola)",
+        "descripción": "Flores coloridas con caras características en tonos púrpura, amarillo, rojo y blanco",
+        "maceta": "Recipiente de cerámica turquesa",
+        "opciones_maceta": [
+            "Turquesa",
+            "Verde",
+            "Terracota",
+            "Azul"
+        ],
+        "nivel_cuidado": "Bajo",
+        "precio_estimado": "€11,25"
+    },
+    {
+        "id": 6,
+        "tipo": "Geranios para balcón",
+        "descripción": "Geranios rojos colgantes para ventana o balcón",
+        "maceta": "Maceta de terracota con soporte de hierro forjado",
+        "opciones_maceta": [
+            "Terracota",
+            "Plástico terracota",
+            "Cerámica",
+            "Fibra"
+        ],
+        "nivel_cuidado": "Moderado",
+        "precio_estimado": "€18,50"
+    },
+    {
+        "id": 7,
+        "tipo": "Combinación lavanda y margaritas",
+        "descripción": "Arreglo de lavanda púrpura con margaritas blancas",
+        "maceta": "Jardinera rectangular de madera",
+        "opciones_maceta": [
+            "Madera oscura",
+            "Madera clara",
+            "Gris",
+            "Negro"
+        ],
+        "nivel_cuidado": "Moderado",
+        "precio_estimado": "€22,95"
+    },
+    {
+        "id": 8,
+        "tipo": "Arreglo floral mixto",
+        "descripción": "Bouquet con lirios blancos, rosas rojas y girasoles amarillos",
+        "maceta": "Arreglo para floristería",
+        "opciones_maceta": [
+            "Sin maceta",
+            "Jarrón de vidrio",
+            "Cesta",
+            "Papel decorativo"
+        ],
+        "nivel_cuidado": "Alto (flores cortadas)",
+        "precio_estimado": "€29,99"
+    },
+    {
+        "id": 9,
+        "tipo": "Ramo nupcial/formal",
+        "descripción": "Arreglo elegante con peonías rosas, rosas blancas y toques de lavanda púrpura con pequeñas flores blancas y follaje verde",
+        "maceta": "Sin maceta - ramo atado con cinta",
+        "opciones_maceta": [
+            "Cinta rosa",
+            "Cinta blanca",
+            "Cinta marfil",
+            "Cinta de encaje"
+        ],
+        "nivel_cuidado": "Alto (flores cortadas)",
+        "precio_estimado": "€85,00"
+    },
+    {
+        "id": 10,
+        "tipo": "Arreglo rústico en caja",
+        "descripción": "Composición de rosas color salmón con lavanda, flores silvestres blancas y eucalipto en contenedor rústico",
+        "maceta": "Caja de madera rústica",
+        "opciones_maceta": [
+            "Madera natural",
+            "Madera blanca",
+            "Madera gris",
+            "Cesta de mimbre"
+        ],
+        "nivel_cuidado": "Alto (flores cortadas)",
+        "precio_estimado": "€45,50"
+    },
+    {
+        "id": 11,
+        "tipo": "Orquídea Phalaenopsis",
+        "descripción": "Elegante orquídea Phalaenopsis con flores blancas y centro magenta en plena floración, con varios tallos florales y botones por abrir",
+        "maceta": "Jarrón de vidrio transparente",
+        "opciones_maceta": [
+            "Jarrón de vidrio",
+            "Maceta cerámica blanca",
+            "Maceta cerámica negra",
+            "Maceta decorativa"
+        ],
+        "nivel_cuidado": "Medio",
+        "precio_estimado": "€35,90"
+    },
+    {
+        "id": 12,
+        "tipo": "Arreglo de helechos con flores amarillas",
+        "descripción": "Composición de helechos verdes vibrantes combinados con pequeñas flores amarillas en un arreglo natural y silvestre",
+        "maceta": "Maceta rústica con musgo",
+        "opciones_maceta": [
+            "Maceta rústica",
+            "Maceta de yute",
+            "Maceta de fibra natural",
+            "Maceta de corcho"
+        ],
+        "nivel_cuidado": "Bajo",
+        "precio_estimado": "€28,50"
+    },
+    {
+        "id": 13,
+        "tipo": "Anturio rojo",
+        "descripción": "Anturio con flores de intenso color rojo brillante y hojas grandes de color verde oscuro brillante",
+        "maceta": "Maceta dorada con soporte metálico",
+        "opciones_maceta": [
+            "Dorada con soporte",
+            "Cerámica blanca",
+            "Terracota",
+            "Metal cepillado"
+        ],
+        "nivel_cuidado": "Medio",
+        "precio_estimado": "€42,75"
+    }
+]

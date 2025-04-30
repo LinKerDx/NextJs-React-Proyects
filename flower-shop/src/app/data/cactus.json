@@ -1,0 +1,87 @@
+[
+    {
+        "id": 1,
+        "tipo": "Cactus globular",
+        "descripción": "Cactus barril redondo con espinas doradas dispuestas en costillas verticales",
+        "maceta": "Cuenco de terracota",
+        "opciones_maceta": [
+            "Terracota",
+            "Negro",
+            "Blanco",
+            "Azul marino"
+        ],
+        "nivel_cuidado": "Bajo mantenimiento",
+        "precio_estimado": "€15,50"
+    },
+    {
+        "id": 2,
+        "tipo": "Conjunto de Mammillaria",
+        "descripción": "Múltiples pequeños cactus redondos con espinas doradas creciendo juntos",
+        "maceta": "Cerámica decorativa con motivos florales",
+        "opciones_maceta": [
+            "Blanco con flores",
+            "Verde pastel",
+            "Rosa claro",
+            "Amarillo suave"
+        ],
+        "nivel_cuidado": "Bajo mantenimiento",
+        "precio_estimado": "€18,75"
+    },
+    {
+        "id": 3,
+        "tipo": "Cactus columnar",
+        "descripción": "Pequeño cactus de crecimiento vertical con costillas visibles",
+        "maceta": "Cerámica blanca minimalista",
+        "opciones_maceta": [
+            "Blanco",
+            "Gris",
+            "Negro mate",
+            "Terracota"
+        ],
+        "nivel_cuidado": "Bajo mantenimiento",
+        "precio_estimado": "€12,99"
+    },
+    {
+        "id": 4,
+        "tipo": "Opuntia (Nopal)",
+        "descripción": "Cactus de paletas con segmentos planos ovalados y pequeñas espinas",
+        "maceta": "Maceta cilíndrica plateada",
+        "opciones_maceta": [
+            "Plateado",
+            "Cobre",
+            "Dorado",
+            "Bronce"
+        ],
+        "nivel_cuidado": "Bajo mantenimiento",
+        "precio_estimado": "€22,50"
+    },
+    {
+        "id": 5,
+        "tipo": "Opuntia (Nopal)",
+        "descripción": "Cactus de paletas maduro con múltiples segmentos",
+        "maceta": "Maceta moderna con diseño abstracto",
+        "opciones_maceta": [
+            "Multicolor",
+            "Azul geométrico",
+            "Negro y blanco",
+            "Rojo y rosa"
+        ],
+        "nivel_cuidado": "Bajo mantenimiento",
+        "precio_estimado": "€26,90"
+    },
+    {
+        "id": 6,
+        "tipo": "Mammillaria",
+        "descripción": "Pequeño cactus redondo con espinas pronunciadas",
+        "maceta": "Terracota clásica",
+        "opciones_maceta": [
+            "Terracota",
+            "Blanco",
+            "Verde oliva",
+            "Ocre"
+        ],
+        "nivel_cuidado": "Bajo mantenimiento",
+        "exhibición": "Fondo geométrico coloreado",
+        "precio_estimado": "€14,25"
+    }
+]
