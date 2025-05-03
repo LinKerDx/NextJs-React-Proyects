@@ -11,7 +11,8 @@
             "Negro"
         ],
         "nivel_cuidado": "Moderado",
-        "precio_estimado": "€12,99"
+        "precio_estimado": "€12,99",
+        "imagen": "imgs/flores/1.webp"
     },
     {
         "id": 2,
@@ -25,7 +26,8 @@
             "Beige"
         ],
         "nivel_cuidado": "Bajo",
-        "precio_estimado": "€14,50"
+        "precio_estimado": "€14,50",
+        "imagen": "imgs/flores/2.webp"
     },
     {
         "id": 3,
@@ -39,7 +41,8 @@
             "Gris"
         ],
         "nivel_cuidado": "Moderado",
-        "precio_estimado": "€9,95"
+        "precio_estimado": "€9,95",
+        "imagen": "imgs/flores/3.webp"
     },
     {
         "id": 4,
@@ -53,7 +56,8 @@
             "Beige"
         ],
         "nivel_cuidado": "Moderado",
-        "precio_estimado": "€8,75"
+        "precio_estimado": "€8,75",
+        "imagen": "imgs/flores/4.webp"
     },
     {
         "id": 5,
@@ -67,7 +71,8 @@
             "Azul"
         ],
         "nivel_cuidado": "Bajo",
-        "precio_estimado": "€11,25"
+        "precio_estimado": "€11,25",
+        "imagen": "imgs/flores/5.webp"
     },
     {
         "id": 6,
@@ -81,7 +86,8 @@
             "Fibra"
         ],
         "nivel_cuidado": "Moderado",
-        "precio_estimado": "€18,50"
+        "precio_estimado": "€18,50",
+        "imagen": "imgs/flores/6.webp"
     },
     {
         "id": 7,
@@ -95,7 +101,8 @@
             "Negro"
         ],
         "nivel_cuidado": "Moderado",
-        "precio_estimado": "€22,95"
+        "precio_estimado": "€22,95",
+        "imagen": "imgs/flores/7.webp"
     },
     {
         "id": 8,
@@ -109,7 +116,8 @@
             "Papel decorativo"
         ],
         "nivel_cuidado": "Alto (flores cortadas)",
-        "precio_estimado": "€29,99"
+        "precio_estimado": "€29,99",
+        "imagen": "imgs/flores/8.webp"
     },
     {
         "id": 9,
@@ -123,7 +131,8 @@
             "Cinta de encaje"
         ],
         "nivel_cuidado": "Alto (flores cortadas)",
-        "precio_estimado": "€85,00"
+        "precio_estimado": "€85,00",
+        "imagen": "imgs/flores/9.webp"
     },
     {
         "id": 10,
@@ -137,7 +146,8 @@
             "Cesta de mimbre"
         ],
         "nivel_cuidado": "Alto (flores cortadas)",
-        "precio_estimado": "€45,50"
+        "precio_estimado": "€45,50",
+        "imagen": "imgs/flores/10.webp"
     },
     {
         "id": 11,
@@ -151,7 +161,8 @@
             "Maceta decorativa"
         ],
         "nivel_cuidado": "Medio",
-        "precio_estimado": "€35,90"
+        "precio_estimado": "€35,90",
+        "imagen": "imgs/flores/11.webp"
     },
     {
         "id": 12,
@@ -165,7 +176,8 @@
             "Maceta de corcho"
         ],
         "nivel_cuidado": "Bajo",
-        "precio_estimado": "€28,50"
+        "precio_estimado": "€28,50",
+        "imagen": "imgs/flores/12.webp"
     },
     {
         "id": 13,
@@ -179,6 +191,7 @@
             "Metal cepillado"
         ],
         "nivel_cuidado": "Medio",
-        "precio_estimado": "€42,75"
+        "precio_estimado": "€42,75",
+        "imagen": "imgs/flores/13.webp"
     }
 ]

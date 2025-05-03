@@ -6,6 +6,7 @@ export interface Producto {
     opciones_maceta: string[];
     nivel_cuidado: string;
     precio_estimado: string;
+    imagen: string;
 }
 type Productos = {
     vid: string;

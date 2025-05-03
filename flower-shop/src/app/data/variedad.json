@@ -11,7 +11,8 @@
             "Negro"
         ],
         "nivel_cuidado": "Bajo",
-        "precio_estimado": "€24,99"
+        "precio_estimado": "€24,99",
+        "imagen": "imgs/variedad/1.webp"
     },
     {
         "id": 2,
@@ -25,7 +26,8 @@
             "Gris"
         ],
         "nivel_cuidado": "Moderado",
-        "precio_estimado": "€18,50"
+        "precio_estimado": "€18,50",
+        "imagen": "imgs/variedad/2.webp"
     },
     {
         "id": 3,
@@ -39,7 +41,8 @@
             "Gris claro"
         ],
         "nivel_cuidado": "Bajo",
-        "precio_estimado": "€26,99"
+        "precio_estimado": "€26,99",
+        "imagen": "imgs/variedad/3.webp"
     },
     {
         "id": 4,
@@ -53,7 +56,8 @@
             "Negro"
         ],
         "nivel_cuidado": "Muy bajo",
-        "precio_estimado": "€19,99"
+        "precio_estimado": "€19,99",
+        "imagen": "imgs/variedad/4.webp"
     },
     {
         "id": 5,
@@ -67,7 +71,8 @@
             "Negro"
         ],
         "nivel_cuidado": "Muy bajo",
-        "precio_estimado": "€17,50"
+        "precio_estimado": "€17,50",
+        "imagen": "imgs/variedad/5.webp"
     },
     {
         "id": 6,
@@ -81,7 +86,8 @@
             "Negro"
         ],
         "nivel_cuidado": "Muy bajo",
-        "precio_estimado": "€22,50"
+        "precio_estimado": "€22,50",
+        "imagen": "imgs/variedad/6.webp"
     },
     {
         "id": 7,
@@ -95,6 +101,7 @@
             "Verde"
         ],
         "nivel_cuidado": "Moderado",
-        "precio_estimado": "€15,99"
+        "precio_estimado": "€15,99",
+        "imagen": "imgs/variedad/7.webp"
     }
 ]

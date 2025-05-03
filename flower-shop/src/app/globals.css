@@ -16,6 +16,76 @@
 
 }
 
+@theme {
+  --animate-movimientocinta: movimiento-cinta 17s linear infinite;
+  --animate-movimientocintareversa: movimiento-cinta-reversa 17s linear infinite;
+
+  --animate-movimientocinta-mobile: movimiento-cinta-mobile 13s linear infinite;
+  --animate-movimientocintareversa-mobile: movimiento-cinta-reversa-mobile 13s linear infinite;
+
+  --animate-swing: swing 2s linear infinite;
+
+  @keyframes movimiento-cinta {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(120%);
+    }
+
+  }
+
+  @keyframes movimiento-cinta-reversa {
+    0% {
+      transform: translateX(120%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+
+  }
+
+  @keyframes movimiento-cinta-mobile {
+    0% {
+      transform: translateX(-150%);
+    }
+
+    100% {
+      transform: translateX(100%);
+    }
+
+  }
+
+  @keyframes movimiento-cinta-reversa-mobile {
+    0% {
+      transform: translateX(110%);
+    }
+
+    100% {
+      transform: translateX(-150%);
+    }
+
+  }
+
+
+  @keyframes swing {
+    0% {
+      transform: rotate(-10deg);
+    }
+
+    50% {
+      transform: rotate(10deg);
+    }
+
+    100% {
+      transform: rotate(-10deg)
+    }
+
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --primary-dark: rgb(244, 193, 207);
@@ -25,7 +95,7 @@
 
 
 body {
-  background: var(--primary-dark);
+  background: var(--primary);
   color: var(--primary-font);
   font-family: Arial, Helvetica, sans-serif;
 

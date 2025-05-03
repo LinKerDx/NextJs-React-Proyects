@@ -11,7 +11,8 @@
             "Azul marino"
         ],
         "nivel_cuidado": "Bajo mantenimiento",
-        "precio_estimado": "€15,50"
+        "precio_estimado": "€15,50",
+        "imagen": "imgs/cactáceas/1.webp"
     },
     {
         "id": 2,
@@ -25,7 +26,8 @@
             "Amarillo suave"
         ],
         "nivel_cuidado": "Bajo mantenimiento",
-        "precio_estimado": "€18,75"
+        "precio_estimado": "€18,75",
+        "imagen": "imgs/cactáceas/2.webp"
     },
     {
         "id": 3,
@@ -39,7 +41,8 @@
             "Terracota"
         ],
         "nivel_cuidado": "Bajo mantenimiento",
-        "precio_estimado": "€12,99"
+        "precio_estimado": "€12,99",
+        "imagen": "imgs/cactáceas/3.webp"
     },
     {
         "id": 4,
@@ -53,7 +56,8 @@
             "Bronce"
         ],
         "nivel_cuidado": "Bajo mantenimiento",
-        "precio_estimado": "€22,50"
+        "precio_estimado": "€22,50",
+        "imagen": "imgs/cactáceas/4.webp"
     },
     {
         "id": 5,
@@ -67,7 +71,8 @@
             "Rojo y rosa"
         ],
         "nivel_cuidado": "Bajo mantenimiento",
-        "precio_estimado": "€26,90"
+        "precio_estimado": "€26,90",
+        "imagen": "imgs/cactáceas/5.webp"
     },
     {
         "id": 6,
@@ -82,6 +87,7 @@
         ],
         "nivel_cuidado": "Bajo mantenimiento",
         "exhibición": "Fondo geométrico coloreado",
-        "precio_estimado": "€14,25"
+        "precio_estimado": "€14,25",
+        "imagen": "imgs/cactáceas/6.webp"
     }
 ]
