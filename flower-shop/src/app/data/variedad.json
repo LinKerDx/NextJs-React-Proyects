@@ -12,7 +12,8 @@
         ],
         "nivel_cuidado": "Bajo",
         "precio_estimado": "€24,99",
-        "imagen": "imgs/variedad/1.webp"
+        "imagen": "imgs/variedad/1.webp",
+        "categoría": "Variedad"
     },
     {
         "id": 2,
@@ -27,7 +28,8 @@
         ],
         "nivel_cuidado": "Moderado",
         "precio_estimado": "€18,50",
-        "imagen": "imgs/variedad/2.webp"
+        "imagen": "imgs/variedad/2.webp",
+        "categoría": "Variedad"
     },
     {
         "id": 3,
@@ -42,7 +44,8 @@
         ],
         "nivel_cuidado": "Bajo",
         "precio_estimado": "€26,99",
-        "imagen": "imgs/variedad/3.webp"
+        "imagen": "imgs/variedad/3.webp",
+        "categoría": "Variedad"
     },
     {
         "id": 4,
@@ -57,7 +60,8 @@
         ],
         "nivel_cuidado": "Muy bajo",
         "precio_estimado": "€19,99",
-        "imagen": "imgs/variedad/4.webp"
+        "imagen": "imgs/variedad/4.webp",
+        "categoría": "Variedad"
     },
     {
         "id": 5,
@@ -72,7 +76,8 @@
         ],
         "nivel_cuidado": "Muy bajo",
         "precio_estimado": "€17,50",
-        "imagen": "imgs/variedad/5.webp"
+        "imagen": "imgs/variedad/5.webp",
+        "categoría": "Variedad"
     },
     {
         "id": 6,
@@ -87,7 +92,8 @@
         ],
         "nivel_cuidado": "Muy bajo",
         "precio_estimado": "€22,50",
-        "imagen": "imgs/variedad/6.webp"
+        "imagen": "imgs/variedad/6.webp",
+        "categoría": "Variedad"
     },
     {
         "id": 7,
@@ -102,6 +108,7 @@
         ],
         "nivel_cuidado": "Moderado",
         "precio_estimado": "€15,99",
-        "imagen": "imgs/variedad/7.webp"
+        "imagen": "imgs/variedad/7.webp",
+        "categoría": "Variedad"
     }
 ]

@@ -12,7 +12,8 @@
         ],
         "nivel_cuidado": "Moderado",
         "precio_estimado": "€12,99",
-        "imagen": "imgs/flores/1.webp"
+        "imagen": "imgs/flores/1.webp",
+        "categoría": "Flores"
     },
     {
         "id": 2,
@@ -27,7 +28,8 @@
         ],
         "nivel_cuidado": "Bajo",
         "precio_estimado": "€14,50",
-        "imagen": "imgs/flores/2.webp"
+        "imagen": "imgs/flores/2.webp",
+        "categoría": "Flores"
     },
     {
         "id": 3,
@@ -42,7 +44,8 @@
         ],
         "nivel_cuidado": "Moderado",
         "precio_estimado": "€9,95",
-        "imagen": "imgs/flores/3.webp"
+        "imagen": "imgs/flores/3.webp",
+        "categoría": "Flores"
     },
     {
         "id": 4,
@@ -57,7 +60,8 @@
         ],
         "nivel_cuidado": "Moderado",
         "precio_estimado": "€8,75",
-        "imagen": "imgs/flores/4.webp"
+        "imagen": "imgs/flores/4.webp",
+        "categoría": "Flores"
     },
     {
         "id": 5,
@@ -72,7 +76,8 @@
         ],
         "nivel_cuidado": "Bajo",
         "precio_estimado": "€11,25",
-        "imagen": "imgs/flores/5.webp"
+        "imagen": "imgs/flores/5.webp",
+        "categoría": "Flores"
     },
     {
         "id": 6,
@@ -87,7 +92,8 @@
         ],
         "nivel_cuidado": "Moderado",
         "precio_estimado": "€18,50",
-        "imagen": "imgs/flores/6.webp"
+        "imagen": "imgs/flores/6.webp",
+        "categoría": "Flores"
     },
     {
         "id": 7,
@@ -102,7 +108,8 @@
         ],
         "nivel_cuidado": "Moderado",
         "precio_estimado": "€22,95",
-        "imagen": "imgs/flores/7.webp"
+        "imagen": "imgs/flores/7.webp",
+        "categoría": "Flores"
     },
     {
         "id": 8,
@@ -117,7 +124,8 @@
         ],
         "nivel_cuidado": "Alto (flores cortadas)",
         "precio_estimado": "€29,99",
-        "imagen": "imgs/flores/8.webp"
+        "imagen": "imgs/flores/8.webp",
+        "categoría": "Flores"
     },
     {
         "id": 9,
@@ -132,7 +140,8 @@
         ],
         "nivel_cuidado": "Alto (flores cortadas)",
         "precio_estimado": "€85,00",
-        "imagen": "imgs/flores/9.webp"
+        "imagen": "imgs/flores/9.webp",
+        "categoría": "Flores"
     },
     {
         "id": 10,
@@ -147,7 +156,8 @@
         ],
         "nivel_cuidado": "Alto (flores cortadas)",
         "precio_estimado": "€45,50",
-        "imagen": "imgs/flores/10.webp"
+        "imagen": "imgs/flores/10.webp",
+        "categoría": "Flores"
     },
     {
         "id": 11,
@@ -162,7 +172,8 @@
         ],
         "nivel_cuidado": "Medio",
         "precio_estimado": "€35,90",
-        "imagen": "imgs/flores/11.webp"
+        "imagen": "imgs/flores/11.webp",
+        "categoría": "Flores"
     },
     {
         "id": 12,
@@ -177,7 +188,9 @@
         ],
         "nivel_cuidado": "Bajo",
         "precio_estimado": "€28,50",
-        "imagen": "imgs/flores/12.webp"
+        "imagen": "imgs/flores/12.webp",
+        "categoría": "Flores"
+        
     },
     {
         "id": 13,
@@ -192,6 +205,8 @@
         ],
         "nivel_cuidado": "Medio",
         "precio_estimado": "€42,75",
-        "imagen": "imgs/flores/13.webp"
+        "imagen": "imgs/flores/13.webp",
+        "categoría": "Flores"
+        
     }
 ]

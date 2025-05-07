@@ -2,13 +2,14 @@
 
 import SectionContainer from "../components/SectionContainer"
 
+
 export default function Hero() {
 
     return (
         <SectionContainer>
             <span className="relative ">
                 <div
-                    className="flex flex-col md:grid md:grid-cols-4 lg:grid-cols-5 md:gap-1 mask-b-from-90% mask-b-to-100% "
+                    className="flex flex-col md:grid md:grid-cols-4 lg:grid-cols-5 md:gap-1 mask-b-from-80% mask-b-to-100% "
                 >
                     <img
                         src="/Hero1.webp"

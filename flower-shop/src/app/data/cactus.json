@@ -12,7 +12,9 @@
         ],
         "nivel_cuidado": "Bajo mantenimiento",
         "precio_estimado": "€15,50",
-        "imagen": "imgs/cactáceas/1.webp"
+        "imagen": "imgs/cactaceas/1.webp",
+        "categoría": "Cactus"
+        
     },
     {
         "id": 2,
@@ -27,7 +29,8 @@
         ],
         "nivel_cuidado": "Bajo mantenimiento",
         "precio_estimado": "€18,75",
-        "imagen": "imgs/cactáceas/2.webp"
+        "imagen": "imgs/cactaceas/2.webp",
+        "categoría": "Cactus"
     },
     {
         "id": 3,
@@ -42,7 +45,8 @@
         ],
         "nivel_cuidado": "Bajo mantenimiento",
         "precio_estimado": "€12,99",
-        "imagen": "imgs/cactáceas/3.webp"
+        "imagen": "imgs/cactaceas/3.webp",
+        "categoría": "Cactus"
     },
     {
         "id": 4,
@@ -57,7 +61,8 @@
         ],
         "nivel_cuidado": "Bajo mantenimiento",
         "precio_estimado": "€22,50",
-        "imagen": "imgs/cactáceas/4.webp"
+        "imagen": "imgs/cactaceas/4.webp",
+        "categoría": "Cactus"
     },
     {
         "id": 5,
@@ -72,7 +77,8 @@
         ],
         "nivel_cuidado": "Bajo mantenimiento",
         "precio_estimado": "€26,90",
-        "imagen": "imgs/cactáceas/5.webp"
+        "imagen": "imgs/cactaceas/5.webp",
+        "categoría": "Cactus"
     },
     {
         "id": 6,
@@ -88,6 +94,7 @@
         "nivel_cuidado": "Bajo mantenimiento",
         "exhibición": "Fondo geométrico coloreado",
         "precio_estimado": "€14,25",
-        "imagen": "imgs/cactáceas/6.webp"
+        "imagen": "imgs/cactaceas/6.webp",
+        "categoría": "Cactus"
     }
 ]

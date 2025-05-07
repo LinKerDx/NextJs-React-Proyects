@@ -5,14 +5,16 @@ export interface Producto {
     maceta: string;
     opciones_maceta: string[];
     nivel_cuidado: string;
-    precio_estimado: string;
+    precio_estimado: number;
     imagen: string;
+    moneda: string,
+    categoría: string;
 }
 type Productos = {
     vid: string;
     title: string;
     link: string;
-    data: Producto[];
+    data: ListOfProductos;
 }
 
 

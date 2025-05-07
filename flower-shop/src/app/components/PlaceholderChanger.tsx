@@ -2,9 +2,9 @@
 import { useState, useEffect } from "react";
 export default function PlaceholderChanger() {
     const placeholders = [
-        { text: "Busca cactáceas", img: "/imgs/cactáceas/cactácea.svg" },
-        { text: "Encuentra flores", img: "/imgs/flores/flores.svg" },
-        { text: "Comprar plantas", img: "/imgs/variedad/variedad.svg" },
+        { text: "Cáctus", img: "/imgs/cactaceas/cactacea.svg" },
+        { text: "Flores", img: "/imgs/flores/flores.svg" },
+        { text: "Plantas", img: "/imgs/variedad/variedad.svg" },
     ];
 
     const [index, setIndex] = useState(0);
@@ -15,17 +15,17 @@ export default function PlaceholderChanger() {
         }, 5000);
 
         return () => clearInterval(interval);
-    }, [placeholders.length]);
+    },);
 
     const current = placeholders[index];
 
     return (
         <>
-            <img src={current.img} alt="icono" className="w-6 h-6" />
+            <img src={current.img} alt="icono" className="size-5" />
             <input
                 type="text"
                 placeholder={current.text}
-                className="border p-2 rounded"
+                className="border p-2 rounded h-6 w-20 sm:w-30 md:w-50 lg:w-80 xl:w-120 "
             />
         </>
     );

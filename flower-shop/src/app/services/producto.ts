@@ -6,38 +6,47 @@ import Flores from "@/app/data/flores.json";
 import Variedad from "@/app/data/variedad.json";
 import { ListOfProductos } from "../types/productos";
 
-export function useGetData() {
+import ProductosIniciales from "@/app/mocks/productos.json";
+
+export function GetData() {
+    const [producto] = useState<ListOfProductos>(ProductosIniciales)
+    const [filters, setFilters] = useState({
+        nivel_cuidado: "todo",
+        minimo: 0,
+    })
+
+    const productoFiltrado = (producto: ListOfProductos) => {
+        return producto.filter((producto) => {
+            return (
+                (filters.nivel_cuidado === "todo" || producto.nivel_cuidado === filters.nivel_cuidado) &&
+                (producto.precio_estimado >= filters.minimo)
+            )
+        })
+
+    }
+    const productosFiltrados = productoFiltrado(producto)
+
+
     const Productos = [
         {
-            vid: "/assets/cactáceas.mp4",
-            title: "Cactáceas",
-            link: "/categoría/cactáceas",
+            vid: "/assets/cactaceas.mp4",
+            title: "Cactaceas",
+            link: "cactaceas",
             data: Cactáceas,
         },
         {
             vid: "/assets/variedad.mp4",
             title: "Variedad",
-            data: Variedad,
-            link: "/categoría/variedad"
+            link: "variedad",
+            data: Variedad
         },
         {
             vid: "/assets/floral.mp4",
             title: "Florales",
-            link: "/categoría/floral",
+            link: "floral",
             data: Flores,
         },
     ]
-    const [producto, setProducto] = useState<ListOfProductos>([])
 
-
-
-    const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        const target = e.currentTarget as HTMLAnchorElement;
-        const productoSeleccionado = Productos.find((producto) => producto.link === target.getAttribute("href"));
-        if (productoSeleccionado) {
-            setProducto(productoSeleccionado.data);
-        }
-    };
-
-    return { Productos, handleClick, producto }
+    return { Productos, productosFiltrados, setFilters }
 }

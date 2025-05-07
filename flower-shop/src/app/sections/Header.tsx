@@ -27,8 +27,10 @@ export default function Header() {
     return (
         <ClerkProvider>
             <header className="bg-primary px-1 md:px-4 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
-                <nav className="flex justify-between items-center">
-                    <div className="overflow-hidden h-[60px] "><img src="/logo.svg" alt="imagen del logo Pétalo y Verso" className="size-35 object-contain object-top " /></div>
+                <nav className="flex justify-between items-center ">
+                    <Link href="/" className="overflow-hidden ">
+                        <img src="/logo.svg" alt="imagen del logo Pétalo y Verso" className="w-35 object-contain" />
+                    </Link>
                     <div>
                         <form className="flex items-center gap-2 bg-white rounded-full px-4 py-1">
                             <PlaceholderChanger />

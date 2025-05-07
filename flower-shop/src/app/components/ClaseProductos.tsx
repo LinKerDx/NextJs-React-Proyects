@@ -1,9 +1,10 @@
+'use client'
 import Link from "next/link";
 import { Productos } from "../types/productos";
 import SectionContainer from "./SectionContainer";
 
 
-export default function ClaseProductos({ Productos, handleClick }: { Productos: Productos[], handleClick: (e: React.MouseEvent<HTMLAnchorElement>) => void }) {
+export default function ClaseProductos({ Productos }: { Productos: Productos[] }) {
     return (
         <SectionContainer>
             <div className="flex flex-col items-center justify-center bg-primary mask-y-from-90% mask-y-to-110%">
@@ -13,7 +14,8 @@ export default function ClaseProductos({ Productos, handleClick }: { Productos: 
                     {
                         Productos.map((producto, index) => (
                             <div key={index} className="flex flex-col  items-center justify-center mt-4">
-                                <Link href={producto.link} className="flex flex-col items-center justify-center" onClick={handleClick}>
+                                <Link href={`/categoria/${producto.link}`
+                                } className="flex flex-col items-center justify-center">
                                     <h2 className="mt-2 text-xl font-semibold ">{producto.title}</h2>
                                     <video src={producto.vid} className="object-cover h-[500px]" preload="auto" loop autoPlay />
                                 </Link>
