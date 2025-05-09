@@ -1,45 +1,43 @@
 'use client'
 
-import { useState, createContext } from "react"
+import { createContext, useReducer } from "react"
 import { CartContextType, Producto } from "../types/productos"
+import { cartReducer, cartInitialState } from "../reducers/reducers"
+
+
 
 export const CartContext = createContext<CartContextType>({
     cart: [],
-    total: 0,
     addToCart: () => { },
     removeFromCart: () => { },
     clearCart: () => { },
 })
-export function CartProvider({ children }: { children: React.ReactNode }) {
-    const [cart, setCart] = useState()
-    const [total, setTotal] = useState(0)
+
+function useCartReducer(){
+    const [state, dispatch] = useReducer(cartReducer, cartInitialState)
 
     const addToCart = (item: Producto) => {
-        //verificar si ya está en el carrito
-        const itemInCartIndex = cart.findIndex((i) => i.id === item.id)
-        if (itemInCartIndex !== -1) {
-            //si ya está en el carrito, aumentar la cantidad
-            const newCart = structuredClone(cart)
-            newCart[itemInCartIndex].cantidad += 1
-            return setCart(newCart)
-        }
-        //si no está en el carrito, agregarlo
-        setCart((prevState) => ([...prevState, { ...item, cantidad: 1 }]))
-        setTotal((prev) => prev + item.precio_estimado)
+        console.log("Adding to cart:", item);
+        dispatch({ type: 'ADD_TO_CART', payload: item })
     }
-
     const removeFromCart = (item: Producto) => {
-        setCart((prev) => prev.filter((i) => i.id !== item.id))
-        setTotal((prev) => prev - item.precio_estimado)
+        dispatch({ type: 'REMOVE_FROM_CART', payload: item })
     }
 
     const clearCart = () => {
-        setCart([])
-        setTotal(0)
+        console.log("cleaning cart...");
+        dispatch({ type: 'CLEAR_CART' })
     }
+    return { state, addToCart, removeFromCart, clearCart }
+
+}
+
+
+export function CartProvider({ children }: { children: React.ReactNode }) {
+    const { state, addToCart, removeFromCart, clearCart } = useCartReducer()
 
     return (
-        <CartContext.Provider value={{ cart, total, addToCart, removeFromCart, clearCart }}>
+        <CartContext.Provider value={{ cart: state, addToCart, removeFromCart, clearCart }}>
             {children}
         </CartContext.Provider>
     )

@@ -9,7 +9,7 @@ export interface Producto {
     imagen: string;
     moneda: string,
     categoría: string;
-    cantidad: number;
+    cantidad?: number;
 }
 type Productos = {
     vid: string;
@@ -39,7 +39,6 @@ export interface Props {
 
 export interface CartContextType {
     cart: ListOfProductos
-    total: number
     addToCart: (item: Producto) => void
     removeFromCart: (item: Producto) => void
     clearCart: () => void

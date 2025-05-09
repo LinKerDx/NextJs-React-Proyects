@@ -1,33 +1,26 @@
 'use client'
 /* eslint-disable @next/next/no-img-element */
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { ShoppingBag, X, Trash2, Plus, Minus } from 'lucide-react';
 import { useCart } from '../hooks/useCart';
-import { RemoveFromCart } from './icons/Icons';
 
 // Componente principal de la bolsa de compras
 export default function ShoppingCart() {
-    const { cart, clearCart, removeFromCart, addToCart, total } = useCart()
+    const { cart, clearCart, removeFromCart, addToCart } = useCart()
     const [isOpen, setIsOpen] = useState(false);
-    const [items, setItems] = useState(cart);
     const [animateIcon, setAnimateIcon] = useState(false);
 
-    // Actualiza los items cuando cambia el prop
+    // Efecto de animación cuando se añade un nuevo item
     useEffect(() => {
-        setItems(cart);
+
+        setAnimateIcon(true);
+        const timer = setTimeout(() => setAnimateIcon(false), 500);
+        return () => clearTimeout(timer);
+
     }, [cart]);
 
-    // Efecto de animación cuando se añade un nuevo item
-    /*useEffect(() => {
-        if (cartItems.length > items.length) {
-            setAnimateIcon(true);
-            const timer = setTimeout(() => setAnimateIcon(false), 500);
-            return () => clearTimeout(timer);
-        }
-    }, [cart]);/*/
-
     // Calcula el total
-    //const total = items.reduce((sum, item) => sum + (item.precio_estimado * (item.cantidad || 1)), 0);
+    const total = cart.reduce((sum, item) => sum + (item.precio_estimado * (item.cantidad || 1)), 0);
 
     return (
         <div className="fixed top-25 right-5 z-50  ">
@@ -41,9 +34,9 @@ export default function ShoppingCart() {
                     size={30}
                     className={`${animateIcon ? 'animate-bounce' : ''}`}
                 />
-                {items.length > 0 && (
-                    <span className="absolute -top-1 -right-1 bg-primary-dark text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
-                        {items.reduce((sum, item) => sum + (item.cantidad || 1), 0)}
+                {cart.length > 0 && (
+                    <span className="fixed animate-bounce top-20 right-1 bg-primary-dark text-red-600 text-md font-bold rounded-full size-7 flex items-center justify-center">
+                        {cart.reduce((sum, item) => sum + (item.cantidad || 1), 0)}
                     </span>
                 )}
             </button>
@@ -71,11 +64,11 @@ export default function ShoppingCart() {
 
                         {/* Lista de productos */}
                         <div className="overflow-y-auto flex-grow">
-                            {items.length === 0 ? (
+                            {cart.length === 0 ? (
                                 <p className="p-4  text-blue-text text-center">Tu bolsa está vacía</p>
                             ) : (
                                 <ul className="divide-y divide-gray-100">
-                                    {items.map(item => (
+                                    {cart.map(item => (
                                         <li key={item.id} className="p-4 flex gap-3">
                                             {/* Imagen */}
                                             <div className="h-16 w-16 bg-gray-100 rounded overflow-hidden flex-shrink-0">
@@ -123,12 +116,18 @@ export default function ShoppingCart() {
 
 
                         {/* botón de limpiar bolsa */}
-                        {items.length === 0 ? <></> : (
+                        {cart.length === 0 ? <></> : (
                             <div className="flex justify-between items-center p-4 border-b">
-                                <h2 className="font-bold  text-blue-text">Eliminar todo</h2>
                                 <button
                                     onClick={() => clearCart()}
-                                    className="text-blue-text hover:text-blue-text cursor-pointer"
+                                    className="text-blue-text cursor-pointer"
+                                    aria-label="Cerrar"
+                                >
+                                    <h2 className="font-bold  hover:text-red-600">Eliminar todo</h2>
+                                </button>
+                                <button
+                                    onClick={() => clearCart()}
+                                    className="text-blue-text hover:text-red-600 cursor-pointer"
                                     aria-label="Cerrar"
                                 >
                                     <Trash2 size={16} />

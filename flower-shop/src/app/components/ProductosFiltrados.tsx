@@ -11,10 +11,10 @@ export function ProductosFiltrados() {
 
     const { addToCart, cart, removeFromCart } = useCart()
 
-    console.log(cart)
     const checkProducto = (item: Producto) => {
         return cart.some((i) => i.id === item.id)
     }
+
 
     return (
         <>
@@ -24,6 +24,7 @@ export function ProductosFiltrados() {
                     (
                         productosFiltrados.map(item => {
                             const isInCart = checkProducto(item)
+                            console.log(item)
                             return (
                                 <div key={item.id} className="flex flex-col items-center justify-center mt-4">
                                     <article className="bg-primary-dark rounded-xl shadow-md overflow-hidden w-72 h-full flex flex-col transform transition-transform duration-300 hover:scale-105 hover:shadow-xl ">
@@ -62,13 +63,11 @@ export function ProductosFiltrados() {
                                                     <span className="text-xs text-blue-text">Precio</span>
                                                     <span className="font-semibold text-lg">{item.precio_estimado} <small className="text-blue-text">{item.moneda}</small></span>
                                                 </div>
-                                                <button style={{ backgroundColor: isInCart ? 'red' : '#6de06d' }} onClick={() => (
-                                                    isInCart
-                                                        ? removeFromCart(item)
-                                                        : addToCart(item)
-
-                                                )
-                                                } className="cursor-pointer group-hover:animate-elastic-ultrasoft text-white text-sm rounded-lg transition-colors p-2">
+                                                <button style={{ backgroundColor: isInCart ? 'black' : '#6de06d' }} onClick={() => {
+                                                    console.log("Item:", item);
+                                                    return (isInCart ? removeFromCart(item) : addToCart(item))
+                                                }
+                                                } className="cursor-pointer group-hover:animate-elastic-ultrasoft text-white text-sm rounded-lg transition-colors p-1">
                                                     {isInCart ? <RemoveFromCart /> : <AddToCartIcon />}
                                                 </button>
                                                 <button className="bg-primary group-hover:bg-red-600 cursor-pointer group-hover:animate-elastic-ultrasoft text-white text-sm py-2 px-4 rounded-lg transition-colors">
@@ -76,8 +75,9 @@ export function ProductosFiltrados() {
                                                 </button>
                                             </div>
                                         </div>
-                                    </article>
-                                </div>)
+                                    </article >
+                                </div >
+                            )
                         })
                     )
                     : <NoEncuentra />
