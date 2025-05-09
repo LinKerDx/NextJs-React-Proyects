@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/app/sections/Footer";
 import Header from "@/app/sections/Header";
 import ShoppingCart from "./components/ShoppingCart";
+import { CartProvider } from "./context/cart";
 
 
 const geistSans = Geist({
@@ -33,6 +34,9 @@ export default function RootLayout({
       >
         <Header />
         <main className="flex flex-col gap-4">
+          <CartProvider>
+            <ShoppingCart />
+          </CartProvider>
           {children}
         </main>
         <Footer />

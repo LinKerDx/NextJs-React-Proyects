@@ -9,6 +9,7 @@ export interface Producto {
     imagen: string;
     moneda: string,
     categoría: string;
+    cantidad: number;
 }
 type Productos = {
     vid: string;
@@ -17,6 +18,15 @@ type Productos = {
     data: ListOfProductos;
 }
 
+export interface FiltersState {
+    nivel_cuidado: string;
+    minimo: number;
+}
+
+export interface FiltroContextType {
+    filters: { nivel_cuidado: string, minimo: number };
+    setFilters: (filters: { nivel_cuidado: string, minimo: number }) => void
+}
 
 export type ListOfProductos = Producto[];
 
@@ -24,4 +34,13 @@ export interface Props {
     producto: ListOfProductos;
     setProducto: Productos;
     handleClick: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+}
+
+
+export interface CartContextType {
+    cart: ListOfProductos
+    total: number
+    addToCart: (item: Producto) => void
+    removeFromCart: (item: Producto) => void
+    clearCart: () => void
 }

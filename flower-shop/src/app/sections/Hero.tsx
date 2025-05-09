@@ -7,23 +7,25 @@ export default function Hero() {
 
     return (
         <SectionContainer>
-            <span className="relative ">
+            <div className="relative ">
                 <div
                     className="flex flex-col md:grid md:grid-cols-4 lg:grid-cols-5 md:gap-1 mask-b-from-80% mask-b-to-100% "
                 >
                     <img
                         src="/Hero1.webp"
                         alt="Eliza-chan acomodando flores"
-                        className="Eli-chan object-fill lg:col-span-1  aspect-[9/16] "
+                        className="Eli-chan object-fill lg:col-span-1 aspect-[9/16] "
                     />
-                    <img
-                        src="/Hero2.gif"
-                        alt="imagen de una persona acomodando flores"
+                    <video
+                        src="/assets/Hero4.webm"
                         className="object-fill hidden md:inline-flex col-span-3 aspect-video"
+                        autoPlay
+                        loop
+                        muted
                     />
                     <img
                         src="/Hero3.webp"
-                        alt="imagen de interpretación del pensamiento en forma de cerebro"
+                        alt="imagen de un arbol de cerezo"
                         className="object-fill hidden lg:inline-flex col-span-1 aspect-[9/16] "
                     />
                 </div>
@@ -35,7 +37,7 @@ export default function Hero() {
                     </p>
                 </div>
 
-            </span>
+            </div>
         </SectionContainer>
     )
 

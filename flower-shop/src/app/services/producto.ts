@@ -1,29 +1,16 @@
 'use client'
 import { useState } from "react";
-
 import Cactáceas from "@/app/data/cactus.json";
 import Flores from "@/app/data/flores.json";
 import Variedad from "@/app/data/variedad.json";
 import { ListOfProductos } from "../types/productos";
 
 import ProductosIniciales from "@/app/mocks/productos.json";
+import { useFilters } from "../hooks/useFilters";
 
 export function GetData() {
     const [producto] = useState<ListOfProductos>(ProductosIniciales)
-    const [filters, setFilters] = useState({
-        nivel_cuidado: "todo",
-        minimo: 0,
-    })
-
-    const productoFiltrado = (producto: ListOfProductos) => {
-        return producto.filter((producto) => {
-            return (
-                (filters.nivel_cuidado === "todo" || producto.nivel_cuidado === filters.nivel_cuidado) &&
-                (producto.precio_estimado >= filters.minimo)
-            )
-        })
-
-    }
+    const { setFilters, productoFiltrado } = useFilters()
     const productosFiltrados = productoFiltrado(producto)
 
 

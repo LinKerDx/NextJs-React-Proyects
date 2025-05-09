@@ -1,22 +1,22 @@
 'use client';
-import { useId, useState } from "react";
+import { useId } from "react";
+import { useFilters } from "../hooks/useFilters";
+import { FiltersState } from "../types/productos";
 
-export function Filtro({ onChange }: { onChange: (filters: { categoría: string; minimo: number }) => void }) {
-
-    const [precioMin, setPrecioMin] = useState(0)
+export function Filtro() {
+    const { filters, setFilters } = useFilters()
     const minPriceFilterId = useId();
     const careLevelFilterId = useId();
 
     const handleChangeMinPrice = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setPrecioMin(e.target.value);
-        onChange(prevState => ({
+        setFilters((prevState) => ({
             ...prevState,
             minimo: e.target.value,
         }));
     };
 
     const handleSelectCare = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        onChange(prevState => ({
+        setFilters(prevState => ({
             ...prevState,
             nivel_cuidado: e.target.value,
         }));
@@ -24,14 +24,13 @@ export function Filtro({ onChange }: { onChange: (filters: { categoría: string;
 
     return (
         <section className="flex flex-col gap-4">
-            <h1 className="text-2xl font-bold">Filtros</h1>
             <div className="flex flex-row gap-4 md:gap-8">
-                <div className="flex flex-rows gap-2 items-center">
+                <div className="flex  flex-col md:flex-rows gap-2 items-center">
                     <label htmlFor={minPriceFilterId} className="text-lg font-semibold">Precio Mínimo</label>
-                    <input onChange={handleChangeMinPrice} type="range" id={minPriceFilterId} min='0' max='100' className="border rounded" />
-                    <span>${precioMin}</span>
+                    <input onChange={handleChangeMinPrice} value={filters.minimo} type="range" id={minPriceFilterId} min='0' max='100' className="border rounded" />
+                    <output>${filters.minimo}</output>
                 </div>
-                <div className="flex flex-rows gap-2 items-center">
+                <div className="flex flex-col md:flex-rows gap-2 items-center">
                     <label htmlFor={careLevelFilterId} className="text-lg font-semibold">Tipo de Cuidado</label>
                     <select onChange={handleSelectCare} id={careLevelFilterId} className="p-2 border rounded">
                         <option value="todo">Todo</option>

@@ -8,8 +8,8 @@ export default function ClaseProductos({ Productos }: { Productos: Productos[] }
     return (
         <SectionContainer>
             <div className="flex flex-col items-center justify-center bg-primary mask-y-from-90% mask-y-to-110%">
-                <h1 className="text-4xl font-bold ">Productos</h1>
-                <p className="mt-4 text-lg ">Aquí puedes ver todos nuestros productos.</p>
+                <h1 className="text-4xl font-bold ">Categorías</h1>
+                <p className="mt-4 text-lg ">Aquí puedes ver todos nuestros productos por categorías.</p>
                 <div className="grid grid-cols-1 gap-4 mt-8 md:grid-cols-2 lg:grid-cols-3">
                     {
                         Productos.map((producto, index) => (
