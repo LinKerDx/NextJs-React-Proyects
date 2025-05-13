@@ -1,10 +1,26 @@
 'use client'
 import Link from "next/link";
-import { Productos } from "../types/productos";
 import SectionContainer from "./SectionContainer";
 
 
-export default function ClaseProductos({ Productos }: { Productos: Productos[] }) {
+export default function ClaseProductos() {
+
+    const Productos = [{
+        title: "Cactus",
+        id: "0",
+        vid: "/assets/cactaceas.mp4"
+    },
+    {
+        title: "Variedad",
+        id: "1",
+        vid: "/assets/variedad.mp4"
+    },
+    {
+        title: "Flores",
+        id: "2",
+        vid: "/assets/floral.mp4"
+    }
+    ]
     return (
         <SectionContainer>
             <div className="flex flex-col items-center justify-center bg-primary mask-y-from-90% mask-y-to-110%">
@@ -14,7 +30,7 @@ export default function ClaseProductos({ Productos }: { Productos: Productos[] }
                     {
                         Productos.map((producto, index) => (
                             <div key={index} className="flex flex-col  items-center justify-center mt-4">
-                                <Link href={`/categoria/${producto.link}`
+                                <Link href={`/categoria/${producto.id}`
                                 } className="flex flex-col items-center justify-center">
                                     <h2 className="mt-2 text-xl font-semibold ">{producto.title}</h2>
                                     <video src={producto.vid} className="object-cover h-[500px]" preload="auto" loop autoPlay />

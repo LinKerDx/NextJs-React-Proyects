@@ -9,14 +9,14 @@ export function Filtro() {
     const careLevelFilterId = useId();
 
     const handleChangeMinPrice = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setFilters((prevState) => ({
+        setFilters(prevState => ({
             ...prevState,
-            minimo: e.target.value,
+            minimo: Number(e.target.value),
         }));
     };
 
     const handleSelectCare = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        setFilters(prevState => ({
+        setFilters((prevState: FiltersState) => ({
             ...prevState,
             nivel_cuidado: e.target.value,
         }));
@@ -27,7 +27,7 @@ export function Filtro() {
             <div className="flex flex-row gap-4 md:gap-8">
                 <div className="flex  flex-col md:flex-rows gap-2 items-center">
                     <label htmlFor={minPriceFilterId} className="text-lg font-semibold">Precio Mínimo</label>
-                    <input onChange={handleChangeMinPrice} value={filters.minimo} type="range" id={minPriceFilterId} min='0' max='100' className="border rounded" />
+                    <input onChange={handleChangeMinPrice} value={filters.minimo} type="range" id={minPriceFilterId} min={0} max={100} className="border rounded" />
                     <output>${filters.minimo}</output>
                 </div>
                 <div className="flex flex-col md:flex-rows gap-2 items-center">

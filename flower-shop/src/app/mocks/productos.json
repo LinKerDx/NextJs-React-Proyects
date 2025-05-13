@@ -13,8 +13,11 @@
         "nivel_cuidado": "Bajo mantenimiento",
         "precio_estimado": 15.50,
         "moneda": "euros",
-        "imagen": "imgs/cactaceas/1.webp",
-        "categoría": "Cactus"
+        "imagen": "/imgs/cactaceas/1.webp",
+        "categoría": "Cactus",
+        "stock": 10,
+        "descuento": 0,
+        "rating": 4.9
     },
     {
         "id": 2,
@@ -30,8 +33,11 @@
         "nivel_cuidado": "Bajo mantenimiento",
         "precio_estimado": 18.75,
         "moneda": "euros",
-        "imagen": "imgs/cactaceas/2.webp",
-        "categoría": "Cactus"
+        "imagen": "/imgs/cactaceas/2.webp",
+        "categoría": "Cactus",
+        "stock": 15,
+        "descuento": 0,
+        "rating": 5
     },
     {
         "id": 3,
@@ -47,8 +53,11 @@
         "nivel_cuidado": "Bajo mantenimiento",
         "precio_estimado": 12.99,
         "moneda": "euros",
-        "imagen": "imgs/cactaceas/3.webp",
-        "categoría": "Cactus"
+        "imagen": "/imgs/cactaceas/3.webp",
+        "categoría": "Cactus",
+        "stock": 20,
+        "descuento": 0,
+        "rating": 5
     },
     {
         "id": 4,
@@ -64,8 +73,11 @@
         "nivel_cuidado": "Bajo mantenimiento",
         "precio_estimado": 22.50,
         "moneda": "euros",
-        "imagen": "imgs/cactaceas/4.webp",
-        "categoría": "Cactus"
+        "imagen": "/imgs/cactaceas/4.webp",
+        "categoría": "Cactus",
+        "stock": 50,
+        "descuento": 8,
+        "rating": 4.1
     },
     {
         "id": 5,
@@ -81,8 +93,11 @@
         "nivel_cuidado": "Bajo mantenimiento",
         "precio_estimado": 26.90,
         "moneda": "euros",
-        "imagen": "imgs/cactaceas/5.webp",
-        "categoría": "Cactus"
+        "imagen": "/imgs/cactaceas/5.webp",
+        "categoría": "Cactus",
+        "stock": 30,
+        "descuento": 30,
+        "rating": 5
     },
     {
         "id": 6,
@@ -96,11 +111,13 @@
             "Ocre"
         ],
         "nivel_cuidado": "Bajo mantenimiento",
-        "exhibición": "Fondo geométrico coloreado",
         "precio_estimado": 14.25,
         "moneda": "euros",
-        "imagen": "imgs/cactaceas/6.webp",
-        "categoría": "Cactus"
+        "imagen": "/imgs/cactaceas/6.webp",
+        "categoría": "Cactus",
+        "stock": 10,
+        "descuento": 5,
+        "rating": 4.3
     },
     {
         "id": 7,
@@ -116,8 +133,11 @@
         "nivel_cuidado": "Bajo",
         "precio_estimado": 24.99,
         "moneda": "euros",
-        "imagen": "imgs/variedad/1.webp",
-        "categoría": "Variedad"
+        "imagen": "/imgs/variedad/1.webp",
+        "categoría": "Variedad",
+        "stock": 10,
+        "descuento": 5,
+        "rating": 4.5
     },
     {
         "id": 8,
@@ -133,8 +153,11 @@
         "nivel_cuidado": "Moderado",
         "precio_estimado": 18.50,
         "moneda": "euros",
-        "imagen": "imgs/variedad/2.webp",
-        "categoría": "Variedad"
+        "imagen": "/imgs/variedad/2.webp",
+        "categoría": "Variedad",
+        "stock": 10,
+        "descuento": 0,
+        "rating": 4.5
     },
     {
         "id": 9,
@@ -150,8 +173,11 @@
         "nivel_cuidado": "Bajo",
         "precio_estimado": 26.99,
         "moneda": "euros",
-        "imagen": "imgs/variedad/3.webp",
-        "categoría": "Variedad"
+        "imagen": "/imgs/variedad/3.webp",
+        "categoría": "Variedad",
+        "stock": 12,
+        "descuento": 10,
+        "rating": 5
     },
     {
         "id": 10,
@@ -167,8 +193,11 @@
         "nivel_cuidado": "Muy bajo",
         "precio_estimado": 19.99,
         "moneda": "euros",
-        "imagen": "imgs/variedad/4.webp",
-        "categoría": "Variedad"
+        "imagen": "/imgs/variedad/4.webp",
+        "categoría": "Variedad",
+        "stock": 11,
+        "descuento": 0,
+        "rating": 4.2
     },
     {
         "id": 11,
@@ -184,8 +213,11 @@
         "nivel_cuidado": "Muy bajo",
         "precio_estimado": 17.50,
         "moneda": "euros",
-        "imagen": "imgs/variedad/5.webp",
-        "categoría": "Variedad"
+        "imagen": "/imgs/variedad/5.webp",
+        "categoría": "Variedad",
+        "stock": 13,
+        "descuento": 15,
+        "rating": 4.5
     },
     {
         "id": 12,
@@ -201,8 +233,11 @@
         "nivel_cuidado": "Muy bajo",
         "precio_estimado": 22.50,
         "moneda": "euros",
-        "imagen": "imgs/variedad/6.webp",
-        "categoría": "Variedad"
+        "imagen": "/imgs/variedad/6.webp",
+        "categoría": "Variedad",
+        "stock": 3,
+        "descuento": 30,
+        "rating": 4.5
     },
     {
         "id": 13,
@@ -218,8 +253,11 @@
         "nivel_cuidado": "Moderado",
         "precio_estimado": 15.99,
         "moneda": "euros",
-        "imagen": "imgs/variedad/7.webp",
-        "categoría": "Variedad"
+        "imagen": "/imgs/variedad/7.webp",
+        "categoría": "Variedad",
+        "stock": 21,
+        "descuento": 0,
+        "rating": 4.2
     },
     {
         "id": 14,
@@ -235,8 +273,11 @@
         "nivel_cuidado": "Moderado",
         "precio_estimado": 12.99,
         "moneda": "euros",
-        "imagen": "imgs/flores/1.webp",
-        "categoría": "Flores"
+        "imagen": "/imgs/flores/1.webp",
+        "categoría": "Flores",
+        "stock": 40,
+        "descuento": 0,
+        "rating": 4.5
     },
     {
         "id": 15,
@@ -252,8 +293,11 @@
         "nivel_cuidado": "Bajo",
         "precio_estimado": 14.50,
         "moneda": "euros",
-        "imagen": "imgs/flores/2.webp",
-        "categoría": "Flores"
+        "imagen": "/imgs/flores/2.webp",
+        "categoría": "Flores",
+        "stock": 20,
+        "descuento": 0,
+        "rating": 4.5
     },
     {
         "id": 16,
@@ -269,8 +313,11 @@
         "nivel_cuidado": "Moderado",
         "precio_estimado": 9.95,
         "moneda": "euros",
-        "imagen": "imgs/flores/3.webp",
-        "categoría": "Flores"
+        "imagen": "/imgs/flores/3.webp",
+        "categoría": "Flores",
+        "stock": 27,
+        "descuento": 7,
+        "rating": 4.5
     },
     {
         "id": 17,
@@ -286,8 +333,11 @@
         "nivel_cuidado": "Moderado",
         "precio_estimado": 8.75,
         "moneda": "euros",
-        "imagen": "imgs/flores/4.webp",
-        "categoría": "Flores"
+        "imagen": "/imgs/flores/4.webp",
+        "categoría": "Flores",
+        "stock": 23,
+        "descuento": 15,
+        "rating": 5
     },
     {
         "id": 18,
@@ -303,8 +353,11 @@
         "nivel_cuidado": "Bajo",
         "precio_estimado": 11.25,
         "moneda": "euros",
-        "imagen": "imgs/flores/5.webp",
-        "categoría": "Flores"
+        "imagen": "/imgs/flores/5.webp",
+        "categoría": "Flores",
+        "stock": 23,
+        "descuento": 0,
+        "rating": 4.9
     },
     {
         "id": 19,
@@ -320,8 +373,11 @@
         "nivel_cuidado": "Moderado",
         "precio_estimado": 18.50,
         "moneda": "euros",
-        "imagen": "imgs/flores/6.webp",
-        "categoría": "Flores"
+        "imagen": "/imgs/flores/6.webp",
+        "categoría": "Flores",
+        "stock": 12,
+        "descuento": 0,
+        "rating": 4.8
     },
     {
         "id": 20,
@@ -337,8 +393,11 @@
         "nivel_cuidado": "Moderado",
         "precio_estimado": 22.95,
         "moneda": "euros",
-        "imagen": "imgs/flores/7.webp",
-        "categoría": "Flores"
+        "imagen": "/imgs/flores/7.webp",
+        "categoría": "Flores",
+        "stock": 30,
+        "descuento": 0,
+        "rating": 4.7
     },
     {
         "id": 21,
@@ -354,8 +413,11 @@
         "nivel_cuidado": "Alto (flores cortadas)",
         "precio_estimado": 29.99,
         "moneda": "euros",
-        "imagen": "imgs/flores/8.webp",
-        "categoría": "Flores"
+        "imagen": "/imgs/flores/8.webp",
+        "categoría": "Flores",
+        "stock": 11,
+        "descuento": 0,
+        "rating": 4.2
     },
     {
         "id": 22,
@@ -371,8 +433,11 @@
         "nivel_cuidado": "Alto (flores cortadas)",
         "precio_estimado": 85.00,
         "moneda": "euros",
-        "imagen": "imgs/flores/9.webp",
-        "categoría": "Flores"
+        "imagen": "/imgs/flores/9.webp",
+        "categoría": "Flores",
+        "stock": 23,
+        "descuento": 0,
+        "rating": 5
     },
     {
         "id": 23,
@@ -388,8 +453,11 @@
         "nivel_cuidado": "Alto (flores cortadas)",
         "precio_estimado": 45.50,
         "moneda": "euros",
-        "imagen": "imgs/flores/10.webp",
-        "categoría": "Flores"
+        "imagen": "/imgs/flores/10.webp",
+        "categoría": "Flores",
+        "stock": 18,
+        "descuento": 20,
+        "rating": 4.8
     },
     {
         "id": 24,
@@ -405,8 +473,11 @@
         "nivel_cuidado": "Medio",
         "precio_estimado": 35.90,
         "moneda": "euros",
-        "imagen": "imgs/flores/11.webp",
-        "categoría": "Flores"
+        "imagen": "/imgs/flores/11.webp",
+        "categoría": "Flores",
+        "stock": 15,
+        "descuento": 0,
+        "rating": 5
     },
     {
         "id": 25,
@@ -422,8 +493,11 @@
         "nivel_cuidado": "Bajo",
         "precio_estimado": 28.50,
         "moneda": "euros",
-        "imagen": "imgs/flores/12.webp",
-        "categoría": "Flores"
+        "imagen": "/imgs/flores/12.webp",
+        "categoría": "Flores",
+        "stock": 17,
+        "descuento": 10,
+        "rating": 4.1
     },
     {
         "id": 26,
@@ -439,7 +513,10 @@
         "nivel_cuidado": "Medio",
         "precio_estimado": 42.75,
         "moneda": "euros",
-        "imagen": "imgs/flores/13.webp",
-        "categoría": "Flores"
+        "imagen": "/imgs/flores/13.webp",
+        "categoría": "Flores",
+        "stock": 22,
+        "descuento": 0,
+        "rating": 4.5
     }
 ]

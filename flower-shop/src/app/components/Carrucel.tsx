@@ -1,19 +1,24 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
-import { GetData } from "../services/producto"
+import { DatosProducto } from "../services/producto"
 import SectionContainer from "./SectionContainer"
 
 export default function Carrucel() {
-    const { Productos } = GetData()
 
-    const firstlineCactus = Productos[0].data.slice(0, 3)
-    const firstlineFlowers = Productos[1].data.slice(0, 3)
-    const firstlineVariety = Productos[2].data.slice(0, 2)
+    const { Categorías } = DatosProducto()
+
+    const ProductosCactus = Categorías[0]
+    const ProductosFlores = Categorías[1]
+    const ProductosVariedad = Categorías[2]
+
+    const firstlineCactus = ProductosCactus.slice(0, 3)
+    const firstlineFlowers = ProductosFlores.slice(0, 3)
+    const firstlineVariety = ProductosVariedad.slice(0, 2)
 
 
-    const secondlineCactus = Productos[0].data.slice(4, 7)
-    const secondlineFlowers = Productos[1].data.slice(4, 7)
-    const secondlineVariety = Productos[2].data.slice(3, 6)
+    const secondlineCactus = ProductosCactus.slice(4, 7)
+    const secondlineFlowers = ProductosFlores.slice(4, 7)
+    const secondlineVariety = ProductosVariedad.slice(3, 6)
 
 
     return (

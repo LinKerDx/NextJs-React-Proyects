@@ -7,7 +7,6 @@ import { ProductosFiltrados } from "../components/ProductosFiltrados";
 
 export function ProductosListados() {
 
-
     return (
         <SectionContainer>
             <div className="flex flex-col items-center justify-center mt-20 gap-10 w-full ">

@@ -13,11 +13,12 @@ export const CartContext = createContext<CartContextType>({
     clearCart: () => { },
 })
 
-function useCartReducer(){
+
+
+function useCartReducer() {
     const [state, dispatch] = useReducer(cartReducer, cartInitialState)
 
     const addToCart = (item: Producto) => {
-        console.log("Adding to cart:", item);
         dispatch({ type: 'ADD_TO_CART', payload: item })
     }
     const removeFromCart = (item: Producto) => {
@@ -25,11 +26,11 @@ function useCartReducer(){
     }
 
     const clearCart = () => {
-        console.log("cleaning cart...");
         dispatch({ type: 'CLEAR_CART' })
     }
-    return { state, addToCart, removeFromCart, clearCart }
 
+
+    return { state, addToCart, removeFromCart, clearCart }
 }
 
 

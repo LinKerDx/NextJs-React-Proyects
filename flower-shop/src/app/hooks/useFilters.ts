@@ -18,7 +18,31 @@ export function useFilters() {
         })
 
     }
+    const productoFiltradoPorCategoriaCactus = (producto: ListOfProductos) => {
+        return producto.filter((producto) => {
+            return (
+                (producto.categoría === "Cactus")
+            )
+        })
+    }
+    const productoFiltradoPorCategoriaFlorese = (producto: ListOfProductos) => {
+        return producto.filter((producto) => {
+            return (
+                (producto.categoría === "Flores")
+            )
+        })
+    }
+    const productoFiltradoPorCategoriaVariedades = (producto: ListOfProductos) => {
+        return producto.filter((producto) => {
+            return (
+                (producto.categoría === "Variedad")
+            )
+        })
+    }
 
-    return { productoFiltrado, setFilters, filters }
+
+    const categoríasProductos = [productoFiltradoPorCategoriaCactus, productoFiltradoPorCategoriaFlorese, productoFiltradoPorCategoriaVariedades]
+
+    return { productoFiltrado, categoríasProductos, setFilters, filters }
 
 }

@@ -1,39 +1,25 @@
 'use client'
 import { useState } from "react";
-import Cactáceas from "@/app/data/cactus.json";
-import Flores from "@/app/data/flores.json";
-import Variedad from "@/app/data/variedad.json";
-import { ListOfProductos } from "../types/productos";
+import { ListOfProductos, Producto } from "../types/productos";
 
 import ProductosIniciales from "@/app/mocks/productos.json";
 import { useFilters } from "../hooks/useFilters";
+import { useCart } from "../hooks/useCart";
 
-export function GetData() {
+export function DatosProducto() {
+    const { cart } = useCart()
     const [producto] = useState<ListOfProductos>(ProductosIniciales)
-    const { setFilters, productoFiltrado } = useFilters()
+    const { setFilters, productoFiltrado, categoríasProductos } = useFilters()
     const productosFiltrados = productoFiltrado(producto)
+    const productosCactus = categoríasProductos[0](producto)
+    const productosFlores = categoríasProductos[1](producto)
+    const productosVariedad = categoríasProductos[2](producto)
+    
+    const checkProducto = (item: Producto) => {
+        return cart.some((i) => i.id === item.id)
+    }
 
+    const Categorías = [productosCactus, productosFlores, productosVariedad]
 
-    const Productos = [
-        {
-            vid: "/assets/cactaceas.mp4",
-            title: "Cactaceas",
-            link: "cactaceas",
-            data: Cactáceas,
-        },
-        {
-            vid: "/assets/variedad.mp4",
-            title: "Variedad",
-            link: "variedad",
-            data: Variedad
-        },
-        {
-            vid: "/assets/floral.mp4",
-            title: "Florales",
-            link: "floral",
-            data: Flores,
-        },
-    ]
-
-    return { Productos, productosFiltrados, setFilters }
+    return { producto, productosFiltrados, setFilters, Categorías, checkProducto }
 }

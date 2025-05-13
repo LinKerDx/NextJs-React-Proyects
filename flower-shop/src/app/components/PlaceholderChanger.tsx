@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState, useEffect } from "react";
+
 export default function PlaceholderChanger() {
     const placeholders = [
         { text: "Cáctus", img: "/imgs/cactaceas/cactacea.svg" },

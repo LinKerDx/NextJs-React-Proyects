@@ -10,6 +10,9 @@ export interface Producto {
     moneda: string,
     categoría: string;
     cantidad?: number;
+    stock: number;
+    rating: number;
+    descuento: number;
 }
 type Productos = {
     vid: string;
@@ -23,10 +26,12 @@ export interface FiltersState {
     minimo: number;
 }
 
+
 export interface FiltroContextType {
-    filters: { nivel_cuidado: string, minimo: number };
-    setFilters: (filters: { nivel_cuidado: string, minimo: number }) => void
+    filters: FiltersState;
+    setFilters: React.Dispatch<React.SetStateAction<FiltersState>>;
 }
+
 
 export type ListOfProductos = Producto[];
 

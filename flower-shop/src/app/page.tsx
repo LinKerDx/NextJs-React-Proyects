@@ -1,11 +1,10 @@
 'use client'
 import Hero from "@/app/sections/Hero";
-import Productos from "./sections/Productos";
+import Productos from "./sections/CategoríaProductos";
 import Carrucel from "./components/Carrucel";
 import { FiltroProvider } from "./context/filtro";
 import { ProductosListados } from "@/app/sections/ProductosListados";
-
-
+import PreguntasFrecuentes from "./sections/PreguntasFrecuentes";
 
 export default function Home() {
 
@@ -15,6 +14,7 @@ export default function Home() {
       <Carrucel />
       <ProductosListados />
       <Productos />
+      <PreguntasFrecuentes />
     </FiltroProvider>
   );
 }

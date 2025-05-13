@@ -29,9 +29,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        
         <Header />
         <CartProvider>
           <main className="flex flex-col gap-4">
