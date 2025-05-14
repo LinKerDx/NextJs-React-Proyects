@@ -3,7 +3,7 @@ import { Home, ChevronRight, Folder, Code } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function ImprovedBreadcrumb() {
+export default function ImprovedBreadcrumb( ) {
     const [hoveredIndex, setHoveredIndex] = useState(-1);
 
     const breadcrumbItems = [
@@ -13,8 +13,8 @@ export default function ImprovedBreadcrumb() {
     ];
 
     return (
-        <nav aria-label="Breadcrumb" className="py-3 px-4 bg-primary-dark rounded-lg shadow-sm">
-            <ol className="inline-flex items-center flex-wrap gap-2">
+        <nav aria-label="Breadcrumb" className="py-3 md:px-4 bg-primary-dark rounded-lg shadow-sm">
+            <ol className="inline-flex items-center md:gap-2">
                 {breadcrumbItems.map((item, index) => {
                     const Icon = item.icon;
                     const isLast = index === breadcrumbItems.length - 1;
@@ -29,7 +29,7 @@ export default function ImprovedBreadcrumb() {
                         >
                             {index > 0 && (
                                 <ChevronRight
-                                    className="mx-2 text-gray-400"
+                                    className="mx-1 md:mx-2 text-gray-400"
                                     size={16}
                                 />
                             )}

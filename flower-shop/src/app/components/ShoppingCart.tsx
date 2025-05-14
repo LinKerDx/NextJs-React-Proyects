@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { ShoppingBag, X, Trash2, Plus, Minus } from 'lucide-react';
 import { useCart } from '../hooks/useCart';
+import Pagar from './Pagar';
 
 // Componente principal de la bolsa de compras
 export default function ShoppingCart() {
@@ -141,11 +142,7 @@ export default function ShoppingCart() {
                                 <span className="font-medium">Total:</span>
                                 <span className="font-bold">{total.toFixed(2)} euros</span>
                             </div>
-                            <button
-                                className="w-full bg-primary-dark hover:bg-primary-dark/90 text-white py-2 rounded-lg font-medium transition-colors"
-                            >
-                                Finalizar compra
-                            </button>
+                            <Pagar />
                         </div>
                     </div>
                 </>

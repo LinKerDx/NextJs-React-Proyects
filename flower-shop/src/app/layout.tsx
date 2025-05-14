@@ -5,6 +5,7 @@ import Footer from "@/app/sections/Footer";
 import Header from "@/app/sections/Header";
 import ShoppingCart from "./components/ShoppingCart";
 import { CartProvider } from "./context/cart";
+import { Toaster } from "sonner";
 
 
 const geistSans = Geist({
@@ -29,11 +30,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        
+
         <Header />
         <CartProvider>
           <main className="flex flex-col gap-4">
@@ -41,6 +42,7 @@ export default function RootLayout({
             {children}
           </main>
         </CartProvider>
+        <Toaster richColors />
         <Footer />
       </body>
     </html>

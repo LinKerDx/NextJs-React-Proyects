@@ -49,13 +49,12 @@ export default function ProductosRecomendados({ productoActualId, categoria }: P
     }, [productoActualId]);
 
     return (
-        <div>
-            <h2>También te puede interesar</h2>
-            <div className="flex gap-4 flex-wrap rounded-lg">
+        <div className="flex flex-col gap-5">
+            <h2 className="text-2xl font-bold text-center">También te puede interesar</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row gap-4 rounded-lg justify-items-center-safe">
                 {productosAleatorios.map((item) => {
                     const isInCart = checkProducto(item)
                     return (
-
                         <article
                             key={item.id}
                             className="relative w-[220px] flex flex-col bg-white rounded-lg"

@@ -1,58 +1,60 @@
 import { ListOfProductos, Producto } from "../types/productos";
 
-export const cartInitialState: ListOfProductos = JSON.parse(window.localStorage.getItem('cart') || '[]')
+export const getInitialCartState = (): ListOfProductos => {
+    if (typeof window !== 'undefined') {
+        const storedCart = window.localStorage.getItem('cart');
+        return storedCart ? JSON.parse(storedCart) : [];
+    }
+    return []; // en el servidor, devolver vacío
+};
 
 export const CART_ACTIONS_TYPES = {
     ADD_TO_CART: 'ADD_TO_CART',
     REMOVE_FROM_CART: 'REMOVE_FROM_CART',
     CLEAR_CART: 'CLEAR_CART',
-}
+};
 
 export const updateLocalStorage = (state: ListOfProductos) => {
-    window.localStorage.setItem('cart', JSON.stringify(state))
-}
+    if (typeof window !== 'undefined') {
+        window.localStorage.setItem('cart', JSON.stringify(state));
+    }
+};
 
 export const cartReducer = (state: ListOfProductos, action: { type: string, payload?: Producto }) => {
-    const { type: actionType, payload: actionPayload } = action
+    const { type: actionType, payload: actionPayload } = action;
+
     switch (actionType) {
         case CART_ACTIONS_TYPES.ADD_TO_CART: {
-            if (!actionPayload) {
-                return state;
-            }
+            if (!actionPayload) return state;
 
-            const { id } = actionPayload
-            const itemInCartIndex = state.findIndex((i) => i.id === id)
-            if (itemInCartIndex >= 0) {
-                const newState = [
+            const { id } = actionPayload;
+            const itemInCartIndex = state.findIndex((i) => i.id === id);
+
+            const newState = itemInCartIndex >= 0
+                ? [
                     ...state.slice(0, itemInCartIndex),
-                    { ...state[itemInCartIndex] ?? {}, cantidad: (state[itemInCartIndex]?.cantidad ?? 0) + 1 },
-                    ...state.slice(itemInCartIndex + 1)
+                    { ...state[itemInCartIndex], cantidad: (state[itemInCartIndex].cantidad ?? 0) + 1 },
+                    ...state.slice(itemInCartIndex + 1),
                 ]
+                : [...state, { ...actionPayload, cantidad: 1 }];
 
-                updateLocalStorage(newState)
-                return newState
-            }
-            const newState = [...state, { ...actionPayload, cantidad: 1 }]
-            updateLocalStorage(newState)
-            return newState
+            updateLocalStorage(newState);
+            return newState;
         }
+
         case CART_ACTIONS_TYPES.REMOVE_FROM_CART: {
-            if (!actionPayload) {
-                return state;
-            }
-            const { id } = actionPayload
-            const newState = state.filter((i) => i.id !== id)
-            updateLocalStorage(newState)
-            return newState
-
+            if (!actionPayload) return state;
+            const newState = state.filter((i) => i.id !== actionPayload.id);
+            updateLocalStorage(newState);
+            return newState;
         }
+
         case CART_ACTIONS_TYPES.CLEAR_CART: {
-            updateLocalStorage([])
-            return []
+            updateLocalStorage([]);
+            return [];
         }
-        default: {
-            return state
-        }
-    }
-}
 
+        default:
+            return state;
+    }
+};
