@@ -8,19 +8,14 @@ import ImprovedBreadcrumb from "../components/BreadCrumb";
 import ProductosRecomendados from "./ProductosRecomendados";
 import SistemaDePago from "../components/SistemaDePago";
 import FuegosArtificiales from "../components/FuegosArtificiales";
-import { useState } from "react";
+import { useFuegosArtificiales } from "../hooks/useFuegosArtificiales";
 
 export default function ProductoIndividual({ item }: { item: Producto }) {
-    const [disparar, setDisparar] = useState(false);
     const { checkProducto } = DatosProducto()
     const { addToCart, removeFromCart } = useCart()
-
+    const { disparar, lanzarFuegos } = useFuegosArtificiales()
 
     const isInCart = checkProducto(item)
-    const lanzarFuegos = () => {
-        setDisparar(false);
-        setTimeout(() => setDisparar(true), 0); // reinicia el trigger
-    };
 
 
     return (

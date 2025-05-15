@@ -29,7 +29,11 @@ const FuegosArtificiales: React.FC<Props> = ({ disparar }) => {
         canvas.height = window.innerHeight;
 
         const animate = () => {
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
+            const primaryColor = getComputedStyle(document.documentElement)
+                .getPropertyValue('--color-primary')
+                .trim() || 'transparent';
+
+            ctx.fillStyle = `${primaryColor}33`; // Con opacidad
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
             fireworks.current.forEach((p, i) => {
@@ -40,6 +44,7 @@ const FuegosArtificiales: React.FC<Props> = ({ disparar }) => {
 
             requestAnimationFrame(animate);
         };
+
 
         animate();
 
@@ -113,12 +118,14 @@ const FuegosArtificiales: React.FC<Props> = ({ disparar }) => {
         if (disparar) {
             crearFuegos();
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [disparar]);
 
     return (
         <>
             <canvas
                 ref={canvasRef}
+                className='bg-primary'
                 style={{ position: 'fixed', top: 0, left: 0, zIndex: -1 }}
             />
             <audio ref={audioRef} src="/explosion.mp3" preload="auto" />

@@ -5,16 +5,15 @@ import { AddToCartIcon, RemoveFromCart } from "./icons/Icons"
 import { useCart } from "../hooks/useCart"
 import { DatosProducto } from "../services/producto"
 
-
-
-export default function ProductCard({ item }: { item: Producto }) {
+export default function ProductCard({ item, onClick }: { item: Producto, onClick: () => void }) {
     const { addToCart, removeFromCart } = useCart()
     const { checkProducto } = DatosProducto()
-
     const isInCart = checkProducto(item)
+
     return (
         <>
             <div className="flex flex-col items-center justify-center">
+
                 <article className="bg-primary-dark rounded-xl shadow-md overflow-hidden w-72 h-full flex flex-col  transform transition-transform duration-300 hover:scale-105 hover:shadow-xl ">
                     {/* Imagen con contenedor de proporción fija */}
                     <Link href={`/producto/${item.id}`} >
@@ -54,9 +53,13 @@ export default function ProductCard({ item }: { item: Producto }) {
                                 <span className="font-semibold text-lg">{item.precio_estimado} <small className="text-blue-text">{item.moneda}</small></span>
                             </div>
                             <button style={{ backgroundColor: isInCart ? 'black' : '#6de06d' }} onClick={() => {
-                                return (isInCart ? removeFromCart(item) : addToCart(item))
-                            }
-                            } className="cursor-pointer group-hover:animate-elastic-ultrasoft text-white text-sm rounded-lg transition-colors p-1">
+                                if (isInCart) {
+                                    removeFromCart(item);
+                                } else {
+                                    addToCart(item);
+                                    onClick()
+                                }
+                            }} className="cursor-pointer group-hover:animate-elastic-ultrasoft text-white text-sm rounded-lg transition-colors p-1">
                                 {isInCart ? <RemoveFromCart /> : <AddToCartIcon />}
                             </button>
                             <Link href={`/producto/${item.id}`} >
