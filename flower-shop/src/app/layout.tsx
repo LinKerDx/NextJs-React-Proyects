@@ -42,6 +42,7 @@ export default function RootLayout({
             {children}
           </main>
         </CartProvider>
+
         <Toaster richColors />
         <Footer />
       </body>

@@ -4,10 +4,8 @@
 import React, { useState, useEffect } from "react";
 import { DatosProducto } from "../services/producto";
 import { ListOfProductos } from "../types/productos";
-import { Tag } from "lucide-react";
-import { AddToCartIcon, RemoveFromCart } from "../components/icons/Icons";
-import { useCart } from "../hooks/useCart";
 import Link from "next/link";
+import { Oferta } from "../components/icons/Icons";
 
 interface Props {
     productoActualId: number;
@@ -19,8 +17,7 @@ interface Props {
 export default function ProductosRecomendados({ productoActualId, categoria }: Props) {
 
     const [productosAleatorios, setProductosAleatorios] = useState<ListOfProductos>([]);
-    const { producto, checkProducto } = DatosProducto()
-    const { addToCart, removeFromCart } = useCart()
+    const { producto } = DatosProducto()
 
     const productosFiltrados = producto.filter(producto => producto.categoría === categoria);
 
@@ -53,7 +50,6 @@ export default function ProductosRecomendados({ productoActualId, categoria }: P
             <h2 className="text-2xl font-bold text-center">También te puede interesar</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row gap-4 rounded-lg justify-items-center-safe">
                 {productosAleatorios.map((item) => {
-                    const isInCart = checkProducto(item)
                     return (
                         <article
                             key={item.id}
@@ -63,13 +59,13 @@ export default function ProductosRecomendados({ productoActualId, categoria }: P
                                 {/* Badge de descuento */}
                                 {item.descuento > 0 && (
                                     <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md z-10 flex items-center">
-                                        <Tag size={12} className="mr-1" />
+                                        <Oferta />
                                         {item.descuento}% OFF
                                     </div>
                                 )}
 
                                 {/* Contenedor de imagen */}
-                                <div className="relative w-full h-48 overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg overflow-hidden cursor-pointer ">
+                                <div className="relative w-full h-48 shadow-md transition-all duration-300 hover:shadow-lg overflow-hidden cursor-pointer ">
                                     <img
                                         src={item.imagen}
                                         alt={item.tipo}
@@ -92,7 +88,7 @@ export default function ProductosRecomendados({ productoActualId, categoria }: P
                                     </div>
 
                                     {/* Nombre del producto */}
-                                    <h3 className="font-medium text-gray-800 mb-1 line-clamp-2 group-hover:text-blue-600 transition-colors">
+                                    <h3 className="font-medium text-gray-800 mb-1 line-clamp-2 group-hover:text-blue-600 transition-colors h-12">
                                         {item.tipo}
                                     </h3>
 
@@ -134,15 +130,7 @@ export default function ProductosRecomendados({ productoActualId, categoria }: P
                                     </div>
                                 </div>
                             </Link>
-                            {/* Botón de agregar al carrito */}
-                            <button
-                                style={{ backgroundColor: isInCart ? 'black' : '#6de06d' }}
-                                onClick={() => isInCart ? removeFromCart(item) : addToCart(item)}
-                                className="flex items-center justify-center gap-2 text-white text-sm transition-colors p-2 hover:opacity-90 z-50"
-                            >
-                                {isInCart ? <RemoveFromCart /> : <AddToCartIcon />}
-                                {isInCart ? 'Quitar del carrito' : 'Agregar al carrito'}
-                            </button>
+
                         </article>
                     )
                 })}

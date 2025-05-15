@@ -6,17 +6,17 @@ import SectionContainer from "./SectionContainer";
 export default function ClaseProductos() {
 
     const Productos = [{
-        title: "Cactus",
+        category: "Cactus",
         id: "0",
         vid: "/assets/cactaceas.mp4"
     },
     {
-        title: "Variedad",
+        category: "Variedad",
         id: "1",
         vid: "/assets/variedad.mp4"
     },
     {
-        title: "Flores",
+        category: "Flores",
         id: "2",
         vid: "/assets/floral.mp4"
     }
@@ -30,9 +30,9 @@ export default function ClaseProductos() {
                     {
                         Productos.map((producto, index) => (
                             <div key={index} className="flex flex-col  items-center justify-center mt-4">
-                                <Link href={`/categoria/${producto.id}`
+                                <Link href={`/categoria/${producto.category}`
                                 } className="flex flex-col items-center justify-center">
-                                    <h2 className="mt-2 text-xl font-semibold ">{producto.title}</h2>
+                                    <h2 className="mt-2 text-xl font-semibold ">{producto.category}</h2>
                                     <video src={producto.vid} className="object-cover h-[500px]" preload="auto" loop autoPlay />
                                 </Link>
                             </div>

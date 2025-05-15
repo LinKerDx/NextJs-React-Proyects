@@ -6,21 +6,31 @@ import { DatosProducto } from "../services/producto"
 import { Producto } from "../types/productos"
 import ImprovedBreadcrumb from "../components/BreadCrumb";
 import ProductosRecomendados from "./ProductosRecomendados";
-import Pagar from "../components/Pagar";
+import SistemaDePago from "../components/SistemaDePago";
+import FuegosArtificiales from "../components/FuegosArtificiales";
+import { useState } from "react";
 
 export default function ProductoIndividual({ item }: { item: Producto }) {
+    const [disparar, setDisparar] = useState(false);
     const { checkProducto } = DatosProducto()
     const { addToCart, removeFromCart } = useCart()
 
+
     const isInCart = checkProducto(item)
+    const lanzarFuegos = () => {
+        setDisparar(false);
+        setTimeout(() => setDisparar(true), 0); // reinicia el trigger
+    };
 
 
     return (
         <div key={item.id} className="flex flex-col justify-around gap-10">
+            <FuegosArtificiales disparar={disparar} />
+
             {/* Header con navegación y botones */}
             <header className="space-y-4">
                 {/* Breadcrumb */}
-                <ImprovedBreadcrumb />
+                <ImprovedBreadcrumb item={item} />
 
             </header>
 
@@ -44,20 +54,35 @@ export default function ProductoIndividual({ item }: { item: Producto }) {
                         <p className="text-sm text-gray-600 mt-2 whitespace-pre-line">
                             {item.descripción}
                         </p>
+                        {item.opciones_maceta.map((items, index) => {
+                            return (
+                                <div key={index} className="flex flex-rows gap-2">
+                                    <span className="badges py-1 px-4 rounded-lg" >{items}<input className="hidden" type="checkbox" value={items} /></span>
+                                </div>
+                            )
+                        })}
+
+
                     </section>
 
                     {/* Botón de carrito */}
-                    <div className=" flex flex-rows cursor-pointer items-center justify-center gap-5 py-5">
+                    <div className=" flex md:flex-rows cursor-pointer items-center justify-center gap-5 py-5">
                         <button
                             style={{ backgroundColor: isInCart ? 'black' : '#6de06d' }}
-                            onClick={() => isInCart ? removeFromCart(item) : addToCart(item)}
+                            onClick={() => {
+                                if (isInCart) {
+                                    removeFromCart(item);
+                                } else {
+                                    addToCart(item);
+                                    lanzarFuegos();
+                                }
+                            }}
                             className="inline-flex items-center justify-center cursor-pointer gap-1 md:gap-2 text-white text-sm rounded-lg transition-colors p-2 hover:opacity-90"
                         >
                             {isInCart ? <RemoveFromCart /> : <AddToCartIcon />}
                             {isInCart ? 'Quitar del carrito' : 'Agregar al carrito'}
                         </button>
-                        <Pagar />
-
+                        <SistemaDePago />
                     </div>
                 </aside>
             </main>

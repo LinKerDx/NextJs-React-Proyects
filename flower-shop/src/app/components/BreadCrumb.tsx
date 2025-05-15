@@ -1,15 +1,16 @@
 
-import { Home, ChevronRight, Folder, Code } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { ChevronDown } from "./icons/Icons";
+import { Producto } from "../types/productos";
 
-export default function ImprovedBreadcrumb( ) {
+export default function ImprovedBreadcrumb({ item }: { item: Producto }) {
     const [hoveredIndex, setHoveredIndex] = useState(-1);
 
     const breadcrumbItems = [
-        { label: "Home", icon: Home, href: "/" },
-        { label: "Projects", icon: Folder, href: "#" },
-        { label: "Flowbite", icon: Code, href: "#", current: true }
+        { label: "Home", icon: ChevronDown, href: "/" },
+        { label: `${item.categoría}`, icon: ChevronDown, href: `/categoria/${item.categoría}` },
+        { label: `${item.tipo}`, icon: ChevronDown, href: "#", current: true }
     ];
 
     return (
@@ -28,7 +29,7 @@ export default function ImprovedBreadcrumb( ) {
                             onMouseLeave={() => setHoveredIndex(-1)}
                         >
                             {index > 0 && (
-                                <ChevronRight
+                                <ChevronDown
                                     className="mx-1 md:mx-2 text-gray-400"
                                     size={16}
                                 />

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown } from './icons/Icons';
 
 export const AccordionDemo = () => {
     return (

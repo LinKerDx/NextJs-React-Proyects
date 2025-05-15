@@ -5,11 +5,11 @@ import SectionContainer from "./SectionContainer"
 
 export default function Carrucel() {
 
-    const { Categorías } = DatosProducto()
+    const { producto } = DatosProducto()
 
-    const ProductosCactus = Categorías[0]
-    const ProductosFlores = Categorías[1]
-    const ProductosVariedad = Categorías[2]
+    const ProductosCactus = producto.filter(producto => producto.categoría === "Cactus");
+    const ProductosFlores = producto.filter(producto => producto.categoría === "Flores");
+    const ProductosVariedad = producto.filter(producto => producto.categoría === "Variedad");
 
     const firstlineCactus = ProductosCactus.slice(0, 3)
     const firstlineFlowers = ProductosFlores.slice(0, 3)
@@ -19,6 +19,7 @@ export default function Carrucel() {
     const secondlineCactus = ProductosCactus.slice(4, 7)
     const secondlineFlowers = ProductosFlores.slice(4, 7)
     const secondlineVariety = ProductosVariedad.slice(3, 6)
+
 
 
     return (

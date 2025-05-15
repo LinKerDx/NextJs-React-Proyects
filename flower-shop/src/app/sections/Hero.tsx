@@ -12,7 +12,7 @@ export default function Hero() {
                 <div className="absolute -top-4 -left-4 w-16 h-16 rounded-full bg-[#ffc0d0] opacity-60 z-10"></div>
 
 
-                <div className="relative flex flex-col md:grid md:grid-cols-4 lg:grid-cols-5 md:gap-2 overflow-hidden rounded-lg">
+                <div className="relative flex flex-col md:grid md:grid-cols-4 lg:grid-cols-5 md:gap-2 overflow-hidden ">
                     {/* Gradiente overlay */}
                     <div className="absolute inset-0 bg-gradient-to-br from-[#f291ab]/20 to-transparent pointer-events-none z-10"></div>
 
@@ -38,7 +38,7 @@ export default function Hero() {
                     />
                     <video
                         src="/assets/Hero4.webm"
-                        className="hidden md:block w-full h-full object-cover col-span-3 aspect-video transition-all duration-300 hover:brightness-110 hover:scale-[1.02]"
+                        className="hidden md:block w-full h-full object-cover col-span-3 aspect-video transition-all duration-300 hover:brightness-110 "
                         autoPlay
                         loop
                         muted
@@ -50,7 +50,7 @@ export default function Hero() {
                     />
                 </div>
 
-                <div className="md:absolute md:left-1/2 md:-bottom-6 md:-translate-x-1/2 bg-gradient-to-b from-primary to-primary-dark rounded-full py-4 px-6 md:px-8 shadow-lg w-[90%] md:w-[500px] mx-auto text-center -mt-6 md:mt-0 z-30">
+                <div className=" md:absolute md:left-1/2  md:-bottom-7 md:-translate-x-1/2 bg-gradient-to-b from-primary to-primary-dark rounded-b-xl  py-4 px-6 md:px-8 shadow-lg w-[90%] md:w-[500px] mx-auto text-center md:mt-0 z-30">
                     <p className="text-black font-bold text-sm md:text-2xl tracking-wide">
                         Cada arreglo cuenta una historia
                     </p>

@@ -3,16 +3,14 @@
 import ProductCard from "@/app/components/ProductCard";
 import SectionContainer from "@/app/components/SectionContainer"
 import { DatosProducto } from "@/app/services/producto";
+import { useParams } from "next/navigation";
 
-export default function Page({
-    params
-}: {
-    params: { id: string }
-}) {
-    const { id } = params;
-    const productoId = Number(id);
-    const { Categorías } = DatosProducto()
-    const categoría = Categorías[productoId]
+export default function Page() {
+    const params = useParams();
+    const category = params.category;
+    const { producto } = DatosProducto()
+    const categoría = producto.filter(producto => producto.categoría === category)
+
 
     return (
         <SectionContainer>

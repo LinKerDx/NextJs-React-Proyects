@@ -1,9 +1,10 @@
 'use client'
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, useState } from 'react';
-import { ShoppingBag, X, Trash2, Plus, Minus } from 'lucide-react';
 import { useCart } from '../hooks/useCart';
-import Pagar from './Pagar';
+import SistemaDePago from "../components/SistemaDePago";
+import { AddToCartIcon, Minus, Plus, Trash2 } from './icons/Icons';
+
 
 // Componente principal de la bolsa de compras
 export default function ShoppingCart() {
@@ -31,9 +32,7 @@ export default function ShoppingCart() {
                 className="badges p-2 text-blue-text hover:text-red-600 focus:outline-none transition-colors bg-primary-dark rounded-lg cursor-pointer "
                 aria-label="Ver carrito de compras"
             >
-                <ShoppingBag
-                    size={30}
-                    className={`${animateIcon ? 'animate-bounce' : ''}`}
+                <AddToCartIcon className={`${animateIcon ? 'animate-bounce' : ''} size-10`}
                 />
                 {cart.length > 0 && (
                     <span className="fixed animate-bounce top-20 right-1 bg-primary-dark text-red-600 text-md font-bold rounded-full size-7 flex items-center justify-center">
@@ -56,10 +55,10 @@ export default function ShoppingCart() {
                             <h2 className="font-bold  text-blue-text">Mi bolsa de compras</h2>
                             <button
                                 onClick={() => setIsOpen(false)}
-                                className="text-blue-text hover:text-blue-text"
+                                className="text-blue-text hover:text-blue-text cursor-pointer"
                                 aria-label="Cerrar"
                             >
-                                <X size={18} />
+                                X
                             </button>
                         </div>
 
@@ -93,18 +92,18 @@ export default function ShoppingCart() {
                                                     <div className="flex items-center gap-2">
                                                         <button
                                                             onClick={() => removeFromCart(item)}
-                                                            className=" text-blue-text hover:text-primary-dark p-1"
+                                                            className=" text-blue-text hover:text-primary-dark p-1 cursor-pointer"
                                                             aria-label="Reducir cantidad"
                                                         >
-                                                            <Minus size={14} />
+                                                            <Minus />
                                                         </button>
                                                         <span className="text-sm w-5 text-center">{item.cantidad || 1}</span>
                                                         <button
                                                             onClick={() => addToCart(item)}
-                                                            className=" text-blue-text hover:text-primary-dark p-1"
+                                                            className=" text-blue-text hover:text-primary-dark p-1 cursor-pointer"
                                                             aria-label="Aumentar cantidad"
                                                         >
-                                                            <Plus size={14} />
+                                                            <Plus />
                                                         </button>
                                                     </div>
                                                 </div>
@@ -131,7 +130,7 @@ export default function ShoppingCart() {
                                     className="text-blue-text hover:text-red-600 cursor-pointer"
                                     aria-label="Cerrar"
                                 >
-                                    <Trash2 size={16} />
+                                    <Trash2 />
                                 </button>
                             </div>)}
 
@@ -142,7 +141,7 @@ export default function ShoppingCart() {
                                 <span className="font-medium">Total:</span>
                                 <span className="font-bold">{total.toFixed(2)} euros</span>
                             </div>
-                            <Pagar />
+                            <SistemaDePago />
                         </div>
                     </div>
                 </>

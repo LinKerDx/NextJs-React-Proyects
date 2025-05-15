@@ -14,22 +14,24 @@ export default function ProductCard({ item }: { item: Producto }) {
     const isInCart = checkProducto(item)
     return (
         <>
-            <Link href={`/producto/${item.id}`} className="flex flex-col items-center justify-center">
-                <article className="bg-primary-dark rounded-xl shadow-md overflow-hidden w-72 h-full flex flex-col transform transition-transform duration-300 hover:scale-105 hover:shadow-xl ">
+            <div className="flex flex-col items-center justify-center">
+                <article className="bg-primary-dark rounded-xl shadow-md overflow-hidden w-72 h-full flex flex-col  transform transition-transform duration-300 hover:scale-105 hover:shadow-xl ">
                     {/* Imagen con contenedor de proporción fija */}
-                    <div className="relative pt-[100%] overflow-hidden bg-gray-100">
-                        <img
-                            src={item.imagen}
-                            alt={item.tipo}
-                            className="absolute inset-0 w-full h-full object-cover"
-                            loading="lazy"
-                        />
-                        {/* Badge de categoría */}
-                        <span className="absolute top-3 right-3 bg-primary text-white text-xs px-2 py-1 rounded-full">
-                            {item.categoría}
-                        </span>
-                    </div>
+                    <Link href={`/producto/${item.id}`} >
 
+                        <div className="relative pt-[100%] overflow-hidden bg-gray-100">
+                            <img
+                                src={item.imagen}
+                                alt={item.tipo}
+                                className="absolute inset-0 w-full h-full object-cover"
+                                loading="lazy"
+                            />
+                            {/* Badge de categoría */}
+                            <span className="absolute top-3 right-3 bg-primary text-white text-xs px-2 py-1 rounded-full">
+                                {item.categoría}
+                            </span>
+                        </div>
+                    </Link>
                     {/* Contenido del producto */}
                     <div className="p-5 flex flex-col flex-grow">
                         <h2 className="font-bold text-xl text-blue-text mb-2 line-clamp-2">{item.tipo}</h2>
@@ -57,13 +59,15 @@ export default function ProductCard({ item }: { item: Producto }) {
                             } className="cursor-pointer group-hover:animate-elastic-ultrasoft text-white text-sm rounded-lg transition-colors p-1">
                                 {isInCart ? <RemoveFromCart /> : <AddToCartIcon />}
                             </button>
-                            <button className="bg-primary group-hover:bg-red-600 cursor-pointer group-hover:animate-elastic-ultrasoft text-white text-sm py-2 px-4 rounded-lg transition-colors">
-                                Ver detalles
-                            </button>
+                            <Link href={`/producto/${item.id}`} >
+                                <button className="bg-primary group-hover:bg-red-600 cursor-pointer group-hover:animate-elastic-ultrasoft text-white text-sm py-2 px-4 rounded-lg transition-colors">
+                                    Ver detalles
+                                </button>
+                            </Link >
                         </div>
                     </div>
                 </article >
-            </Link >
+            </div>
         </>
     )
 }

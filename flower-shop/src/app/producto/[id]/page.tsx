@@ -9,13 +9,13 @@ export default function ProductPage() {
     const productoId = Number(params.id);
 
     const { producto } = DatosProducto()
-    const productoInd = producto.filter((i) => i.id === productoId);
+    const productos = producto.filter((i) => i.id === productoId);
 
 
     return (
         <SectionContainer>
             {
-                productoInd.map(
+                productos.map(
                     (item) => {
                         return <ProductoIndividual key={item.id} item={item} />
                     }
